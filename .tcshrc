@@ -1,0 +1,52 @@
+#!/bin/tcsh -f
+
+setenv LANG ja_JP.UTF-8
+setenv PAGER less
+setenv EDITOR emacs
+setenv SVN_EDITOR vi
+setenv TERM xterm
+
+setenv LC_MESSAGES ja_JP
+setenv LS_COLORS 'no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.deb=01;31:*.jpg=01;35:*.gif=01;35:*.bmp=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.mpg=01;37:*.avi=01;37:*.gl=01;37:*.dl=01;37:'
+
+set autolist
+unset autologout
+set color
+set colorcat
+set dspleft
+set dspleftset ignoreeof
+limit coredumpsize 0
+set nobeep
+
+
+set path = (/usr/local/bin $path /usr/sbin /usr/local/sbin  )
+
+alias whois "whois -c $HOME/.jwhois.conf"
+#alias ls "ls -F --color=tty"
+
+    complete env 'p/1/e/='
+    complete {un,}setenv 'p/1/e/'
+    complete {un,}set 'p/1/s/'
+    complete unalias 'p/1/a/'
+#    complete cd 'p/1/d/'
+    complete {sudo,strace,which,where} 'p/1/c/'
+    complete man 'p/*/c/'
+    complete kill 'c/-/`kill -l`/'
+    complete killall 'c/-/`kill -l`/' 'p/*/c/'
+    complete gunzip 'n/*/f:*.{gz,Z}/'
+    complete umcompress 'n/*/f:*.Z/'
+    complete *tex 'n/*/f:*.{tex,TEX}/'
+    complete {dvi*,xdvi} 'n/*/f:*.{dvi,DVI}/'
+    complete ps{nup,select} 'n/*/f:*.{ps,PS}/'
+    complete {gv,ghostview} 'n/*/f:*.{ps,eps,PS,pdf,PDF}/'
+    complete {pix,bit}map 'n/*/f:*.{xpm,XPM,xbm,XBM,h,H}/'
+    complete xhost 'c/*{+,-}/$hostnames/' 'p/*/$hostnames/'
+    complete {finger,[M,m]ail} 'c/*@/$hostnames/' 'p/1/u/@'
+    complete [r,s]{sh,login} 'c/*@/$hostnames/' 'n/-l/u/' 'C/*/$hostnames/'
+    complete lftp 'c/*@/$hostnames/' 'n/-l/u/' 'C/*/$hostnames/'
+    complete [r,s]{cp} 'c/*@/$hostnames/:' 'n/-l/u/'
+    complete {nslookup,host,telnet,ping,traceroute} 'p/*/$hostnames/'
+    complete *ftp 'p/*/$hostnames/'
+    complete make 'p/1/(all clean distclean depend install install.man Makefiles)/'
+#    complete ssh 'p/*/$hostnames/'
+#    complete scp 'p/*/$hostnames/'
