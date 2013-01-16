@@ -1,0 +1,20 @@
+nonblock on
+escape ^z^z
+#bind w windowlist -b
+deflogin off
+vbell off
+defscrollback 4000
+caption always '%-Lw%{= BW}%50>[%n%f* %t]%{-}%+Lw%< %= [%m/%d(%D) %c:%s]'
+termcap  xterm|kterm|teraterm|putty 'is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l'
+terminfo xterm|kterm|teraterm|putty 'is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l'
+termcap  xterm|kterm|teraterm|putty ti=\E7\E[?47l
+terminfo xterm|kterm|teraterm|putty ti=\E7\E[?47l
+screen -t mew 0 tcsh
+screen 1 tcsh
+screen 2 tcsh
+select 0
+autodetach on
+startup_message off
+#multiuser on
+#acladd haruna
+# End of File
