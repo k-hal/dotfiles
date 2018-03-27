@@ -1,0 +1,14 @@
+[user]
+	email = koichi.h+github@gmail.com
+	name = Koichi HARUNA
+
+[push]
+	default = simple
+
+[core]
+#	autocrlf = true
+	editor = vi
+	excludesfile = /Users/koichi-haruna/.gitignore_global
+
+[fetch]
+	prune = true

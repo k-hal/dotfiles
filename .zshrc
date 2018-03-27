@@ -22,7 +22,7 @@ setopt COMPLETE_IN_WORD
 #setopt SHARE_HISTORY
 
 ## never ever beep ever
-#setopt NO_BEEP
+setopt NO_BEEP
 
 ## automatically decide when to page a list of completions
 #LISTMAX=0
@@ -37,4 +37,7 @@ HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 setopt hist_ignore_dups     # ignore duplication command history list
-#setopt share_history        # share command history data
+setopt share_history        # share command history data
+setopt hist_reduce_blanks
+
+export LANG=ja_JP.UTF-8
