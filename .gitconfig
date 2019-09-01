@@ -8,7 +8,7 @@
 [core]
 #	autocrlf = true
 	editor = vi
-	excludesfile = /Users/koichi-haruna/.gitignore_global
+	excludesfile = /home/k-hal/.gitignore_global
 
 [fetch]
 	prune = true
