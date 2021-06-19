@@ -9,14 +9,22 @@
 #	autocrlf = true
 	editor = vi
 	excludesfile = /home/k-hal/.gitignore_global
+#	pager = delta --plus-color="#012800" --minus-color="#340001" --theme='Monokai Extended'
+
+[color]
+	ui = true
+
+[diff]
+	colorMoved = dimmed_zebra
+	compactionHeuristic = true
 
 [fetch]
 	prune = true
 
 [pager]
     log = diff-highlight | less
-    show = diff-highlight | less
-    diff = diff-highlight | less
+    show = diff-highlight | more
+    diff = diff-highlight | delta
 
 [ghq]
     root = ~/go/src/
