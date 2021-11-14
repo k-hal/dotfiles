@@ -41,3 +41,9 @@ setopt share_history        # share command history data
 setopt hist_reduce_blanks
 
 export LANG=ja_JP.UTF-8
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/k-hal/.sdkman"
+[[ -s "/home/k-hal/.sdkman/bin/sdkman-init.sh" ]] && source "/home/k-hal/.sdkman/bin/sdkman-init.sh"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
