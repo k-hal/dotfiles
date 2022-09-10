@@ -1,6 +1,7 @@
 [user]
 	email = koichi.h+github@gmail.com
 	name = Koichi HARUNA
+	signingKey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMXpM60ztW9WN7KYL7fnCA5mCNolkWh4Bq5CRcmoRG/E
 
 [push]
 	default = simple
@@ -28,3 +29,7 @@
 [ghq]
     root = ~/go/src/
     root = ~/ghq/
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true
