@@ -1,16 +1,3 @@
-# pyenv
-set -x PYENV_ROOT $HOME/.pyenv
-set -x PATH $PYENV_ROOT/bin $PATH
-source (pyenv init - | psub)
-
-# rbenv
-set -x PATH $HOME/.rbenv/bin $PATH
-source (rbenv init - | psub)
-
-# nodeenv
-set -x PATH $HOME/.nodenv/bin $PATH
-source (nodenv init - | psub)
-
 #fisherパッケージoh-my-fish/plugin-pecoの設定
 function fish_user_key_bindings
   bind \cr peco_select_history # Bind for prco history to Ctrl+r
