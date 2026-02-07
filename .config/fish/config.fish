@@ -28,11 +28,17 @@ set -x PATH $HOME/go/bin $PATH
 # rust
 set -x PATH $HOME/.cargo/bin $PATH
 
+# Lang
 set -x LC_LANG ja_JP.UTF-8
 set -x LC_CTYPE ja_JP.UTF-8
+set -x LANG ja_JP.UTF-8
+#set -x LC_ALL ja_JP.UTF-8
+#set -x LANGUAGE ja_JP.UTF-8
 
 # asdf
-source ~/.asdf/asdf.fish
+# source ~/.asdf/asdf.fish
+set -x ASDF_DATA_DIR $HOME/.asdf
+set -x PATH $ASDF_DATA_DIR/shims $PATH
 
 # github cli
 eval (gh completion -s fish| source)
