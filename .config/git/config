@@ -1,7 +1,7 @@
 [user]
 	email = koichi.h+github@gmail.com
 	name = Koichi HARUNA
-	signingKey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMXpM60ztW9WN7KYL7fnCA5mCNolkWh4Bq5CRcmoRG/E
+	signingKey = ~/.ssh/id_ed25519.pub
 
 [push]
 	default = simple
