@@ -1,0 +1,4 @@
+^/README.*
+^/LICENSE.*
+^/\.git$
+^/\.stow-local-ignore$
